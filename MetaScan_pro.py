@@ -6,20 +6,20 @@ from modules.hash_utils import compute_file_hashes
 from modules.installer import check_and_install_exiftool
 from utils.logger import log_error
 
-def banner():
-    """Display tool banner."""
-    print("=" * 50)
-    print("MetaScan_Pro".center(50))
-    print("Created by: Bhim Saini".center(50))
-    print("=" * 50)
+import shutil
 
-def copyright_notice():
-    """Display a copyright notice or personal initials."""
-    print("=" * 50)
-    print("Notice:".center(50))
-    print("This script is authored by Bhim Saini.".center(50))
-    print("Unauthorized use without proper credit is prohibited.".center(50))
-    print("=" * 50)
+def banner():
+    """Display tool banner with dynamic width based on terminal size."""
+    # Get the current terminal width
+    terminal_width = shutil.get_terminal_size().columns
+    
+    # Ensure a minimum width for the banner
+    banner_width = max(terminal_width, 50)  # Use at least 50 as the minimum width
+
+    print("=" * banner_width)
+    print("MetaScan_Pro".center(banner_width))
+    print("Created by: Bhim Saini".center(banner_width))
+    print("=" * banner_width)
 
 def main():
     """Main entry point."""
