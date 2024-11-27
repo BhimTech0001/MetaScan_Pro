@@ -13,9 +13,18 @@ def banner():
     print("Created by: Bhim Saini".center(50))
     print("=" * 50)
 
+def copyright_notice():
+    """Display a copyright notice or personal initials."""
+    print("=" * 50)
+    print("Notice:".center(50))
+    print("This script is authored by Bhim Saini.".center(50))
+    print("Unauthorized use without proper credit is prohibited.".center(50))
+    print("=" * 50)
+
 def main():
     """Main entry point."""
     banner()
+    copyright_notice()  # Display copyright notice
     check_and_install_exiftool()
     while True:  # Keep running indefinitely
         print("\nOptions:")
