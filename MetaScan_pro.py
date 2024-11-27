@@ -24,7 +24,6 @@ def banner():
 def main():
     """Main entry point."""
     banner()
-    copyright_notice()  # Display copyright notice
     check_and_install_exiftool()
     while True:  # Keep running indefinitely
         print("\nOptions:")
